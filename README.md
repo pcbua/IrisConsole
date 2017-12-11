@@ -6,7 +6,7 @@ Tested with:
 * Delphi FANN 2.1 (actually fann_delphi_2_0) http://leenissen.dk/fann/wp/language-bindings/
 
 Properly compiled and run, gives similar output:
-
+<pre>
 Max epochs      500. Desired error: 0.0010000000.
 Epochs            1. Current error: 4.4984912109. Bit fail 100.
 Epochs           50. Current error: 0.0296522522. Bit fail 4.
@@ -22,3 +22,4 @@ Epochs          500. Current error: 0.0184401381. Bit fail 2.
 ndata=50  nin=4  nout=1
 n=50  Mistakes=0  MSE=0.004796
 FANN: Mistakes=0  MSE=0.004796
+</pre>
