@@ -1,11 +1,13 @@
 # IrisConsole
-Neural Network example with Delphi + FANN (Fast Artificial Neural Network Library)
+Neural Network example with Delphi + FANN (Fast Artificial Neural Network Library) under MS Windows.
+Solves Iris flowers classification problem https://archive.ics.uci.edu/ml/datasets/iris (Fisher, 1936).
+Normalized Iris data set is included.
 
-Tested with:
+Requires:
 * Delphi® 10.2 Tokyo Starter Edition https://www.embarcadero.com/products/delphi/starter/info
 * Delphi FANN 2.1 (actually fann_delphi_2_0) http://leenissen.dk/fann/wp/language-bindings/
 
-Properly compiled and run, gives similar output:
+Properly compiled and run, gives similar output (very fast):
 <pre>
 Max epochs      500. Desired error: 0.0010000000.
 Epochs            1. Current error: 4.4984912109. Bit fail 100.
