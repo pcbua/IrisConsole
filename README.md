@@ -27,4 +27,4 @@ FANN: Mistakes=0  MSE=0.004796
 </pre>
 
 Enjoy my other Machine Learning software:
-<a href="http://sharktime.com/us_SharkyNeuralNetwork.html">Sharky Neural Network</a> - Classification neural network in action.
+<a href="http://sharktime.com/us_SharkyNeuralNetwork.html">Sharky Neural Network - Classification neural network in action</a>.
