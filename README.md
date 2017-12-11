@@ -25,3 +25,6 @@ ndata=50  nin=4  nout=1
 n=50  Mistakes=0  MSE=0.004796
 FANN: Mistakes=0  MSE=0.004796
 </pre>
+
+Enjoy my other Machine Learning software:
+<a href="http://sharktime.com/us_SharkyNeuralNetwork.html">Sharky Neural Network</a> - Classification neural network in action.
