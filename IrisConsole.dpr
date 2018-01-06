@@ -47,6 +47,10 @@ begin
         end;
       if Assigned(Result) then
         begin
+          // set training algorithm
+          fann_set_training_algorithm(Result, FANN_TRAIN_RPROP); // FANN_TRAIN_RPROP, FANN_TRAIN_QUICKPROP, FANN_TRAIN_BATCH, FANN_TRAIN_INCREMENTAL
+          // set error function
+          fann_set_train_error_function(Result, FANN_ERRORFUNC_LINEAR); // FANN_ERRORFUNC_TANH, FANN_ERRORFUNC_LINEAR
           // set the activation function
           fann_set_activation_function_hidden(Result, activation_func_hidden); // for each neuron of the hidden layers
           fann_set_activation_function_output(Result, activation_func_output); // for each neuron of the output layer

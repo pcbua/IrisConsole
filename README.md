@@ -292,23 +292,23 @@ Changing LOOP_TIMES into 1000 may give you better overview (very slow):
 <pre>
 === Summary (after 1000 repetitions) ===
 Permutation: 0
-Average Misclassified Cla.: 2.556
-Average Misclassified Reg.: 2.050
+Average Misclassified Cla.: 2.475
+Average Misclassified Reg.: 2.090
 Permutation: 1
-Average Misclassified Cla.: 2.525
-Average Misclassified Reg.: 12.149
+Average Misclassified Cla.: 2.456
+Average Misclassified Reg.: 15.402
 Permutation: 2
-Average Misclassified Cla.: 2.502
-Average Misclassified Reg.: 32.618
+Average Misclassified Cla.: 2.476
+Average Misclassified Reg.: 5.998
 Permutation: 3
-Average Misclassified Cla.: 2.506
-Average Misclassified Reg.: 4.501
+Average Misclassified Cla.: 2.432
+Average Misclassified Reg.: 2.973
 Permutation: 4
-Average Misclassified Cla.: 2.492
-Average Misclassified Reg.: 20.238
+Average Misclassified Cla.: 2.457
+Average Misclassified Reg.: 12.522
 Permutation: 5
-Average Misclassified Cla.: 2.440
-Average Misclassified Reg.: 1.842
+Average Misclassified Cla.: 2.438
+Average Misclassified Reg.: 2.093
 </pre>
 
 Enjoy my other Machine Learning software:
