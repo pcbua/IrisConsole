@@ -34,11 +34,12 @@ begin
     end;
   AssignFile(tf, path);
   Reset(tf);
+  n := 0; // count data points
+  ndata := 0;
   if not EOF(tf) then
     begin
       ReadLn(tf, ndata, nin, nout);
       WriteLn(Format('ndata=%d  nin=%d  nout=%d', [ndata, nin, nout]));
-      n := 0; // count data points
       if (ndata > 0) and (ndata <= MAX_DATA_POINTS) and (nin = NUMBER_OF_INPUTS) and (nout = 1) then
         begin
           SetLength(Result, ndata);
@@ -112,6 +113,10 @@ begin
           dmax[k] := dmax[k] + 0.1;
           dmin[k] := dmin[k] - 0.1;
         end;
+      if (k < NUMBER_OF_INPUTS) then
+        Write(' Input ' + i2s(k+1) + ': ')
+      else
+        Write('Output ' + i2s(k-NUMBER_OF_INPUTS+1) + ': ');
       WriteLn(Format('%.3f .. %.3f', [dmin[k], dmax[k]]));
     end;
   // normalize all inputs
@@ -140,12 +145,10 @@ function DataSave(const d: TDataArr; const pathTrain, pathTest: string; const pr
     s: string;
   begin
     n := CountSplit( v );
+    outputs := 0;
       case problem of
         PROBLEM_CLASSIFICATION: outputs := NUMBER_OF_CLASSES;
         PROBLEM_REGRESSION    : outputs := 1;
-      else
-        WriteLn('Unknown kind of the problem!');
-        Halt(1);
       end;
     AssignFile(tf, path);
     Rewrite(tf);

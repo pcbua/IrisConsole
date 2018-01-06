@@ -207,7 +207,7 @@ var
 begin
   Randomize();
 
-  // ========== data preparation ==========
+  // ========== data preparation (1) ==========
   CreateDir( FOLDER_GENERATED );
   rawData := DataLoad( PATH_ORIG_DATA );
   nrmData := DataNormalize( rawData, -1.0, +1.0 );
@@ -219,13 +219,15 @@ begin
       strPerm := '.perm' + i2s(perm);
       for loop:=1 to LOOP_TIMES do
         begin
+          // ========== data preparation (2) ==========
+          WriteLn(EOL + '=== Data Split ===');
           DataSplit( {var}nrmData, 33.3, Random(9999) );
-          WriteLn('Saving train data...');
+          WriteLn('Saving data...');
           DataSave( nrmData, PATH_NORM_TRAIN_CLA+strPerm, PATH_NORM_TEST_CLA+strPerm, PROBLEM_CLASSIFICATION, perm );
           DataSave( nrmData, PATH_NORM_TRAIN_REG+strPerm, PATH_NORM_TEST_REG+strPerm, PROBLEM_REGRESSION,     perm );
 
           // ========== classification ==========
-          WriteLn('=== FANN Classification Example ===');
+          WriteLn(EOL + '=== FANN Classification Example ===');
           nnet := NNetCreate(
             HIDDEN_LAYERS,
             NUMBER_OF_INPUTS,
