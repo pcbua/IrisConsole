@@ -216,6 +216,7 @@ begin
       for loop:=1 to LOOP_TIMES do
         begin
           DataSplit( {var}nrmData, 33.3, Random(9999) );
+          WriteLn('Saving train data...');
           DataSave( nrmData, PATH_NORM_TRAIN_CLA+strPerm, PATH_NORM_TEST_CLA+strPerm, PROBLEM_CLASSIFICATION, perm );
           DataSave( nrmData, PATH_NORM_TRAIN_REG+strPerm, PATH_NORM_TEST_REG+strPerm, PROBLEM_REGRESSION,     perm );
 

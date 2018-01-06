@@ -184,12 +184,8 @@ function DataSave(const d: TDataArr; const pathTrain, pathTest: string; const pr
   end;
 begin
   try
-    WriteLn('Saving train data...');
     SaveSplit( SPLIT_TRAIN, pathTrain, perm );
-
-    WriteLn('Saving test data...');
     SaveSplit( SPLIT_TEST, pathTest, perm );
-
     Result := True; // OK
   except
     Result := False; // Error
